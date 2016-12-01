@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Github Repo Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <!--<link rel="stylesheet" href="css/main.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body ng-app='usersModule' ng-controller="testCtrl">
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+	        <table>
+	        	<thead>
+	        		<tr>
+	        			<th>Avatar</th>
+	        			<th>login</th>
+	        			<th>id</th>
+	        			<th>Profile</th>
+	        			<th>Action</th>
+	        		</tr>
+	        	</thead>
+	            <tr ng-repeat="person in myData">
+	            	<td class="avatar"><span><img ng-src="{{person.avatar_url}}" alt="" width="90" /></span></td>
+	            	<td>{{person.login}}</td>
+	            	<td class="center">{{person.id}}</td>
+	            	<td><a href="{{person.html_url}}" target="_blank">Profile</a></td>
+	            	<td><input type="button" value="Click"></td>
+	            </tr>
+	        </table>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
+
+
+        <!-- angularjs -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+        <script src="js/main.js"></script>
+        
+    </body>
+</html>
